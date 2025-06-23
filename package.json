@@ -1,0 +1,49 @@
+{
+  "name": "vite-simple-reload-utils",
+  "type": "module",
+  "version": "1.9.0",
+  "description": "A simple vite plugin for performing a full reload when the public folder is changed",
+  "author": "Topher Anselmo <christopherwk210@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/christopherwk210/vite-simple-reload-utils/#readme",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/christopherwk210/vite-simple-reload-utils.git"
+  },
+  "keywords": [
+    "vite",
+    "vite-plugin"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs",
+      "default": "./dist/index.js"
+    },
+    "./package.json": "./package.json",
+    "./dist/*": "./dist/*"
+  },
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "prepublish": "npm run build"
+  },
+  "peerDependencies": {
+    "vite": ">=4"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.3",
+    "tsup": "^8.5.0",
+    "typescript": "^5.8.3",
+    "vite": "^6.3.5"
+  }
+}
